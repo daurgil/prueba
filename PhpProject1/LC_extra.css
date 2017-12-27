@@ -1,0 +1,536 @@
+
+/**********************************************************************
+                		GENERAL
+**********************************************************************/
+
+.columns-container {
+	background: url(../img/fondo_fibra_carbono.jpg);
+}
+
+
+/**/
+.bc-productwithcategory {
+	margin: 50px 0 0;
+	padding: 0;
+	background: white;
+}
+/**/
+
+.btn-style-2, .btn-style-3, .button, button, button:focus, button:active, button:visited, header#header .cart_block .cart-buttons #button_order_cart, #layer_cart .layer_cart_cart .button-container a.btn, .bc-banner-top .banner-shopnow--btn, .bc-filterproduct .type-tab .nav-tabs li a, .product .pb-center-column #product_comments_block_extra .comments_advices .reviews, .product .pb-center-column #product_comments_block_extra .comments_advices .open-comment-form, .cart_navigation .standard-checkout, .cart_navigation [type="submit"], .cart_navigation .button-exclusive, #products-comparison #product_comparison .button-container a.lnk_view, #contact .contact-form-box div.uploader span.action, .module-bcblog-post .pl_comment_form .submit a, .bc-top-footer #newsletter_block_left .news_content .block_content .form-group input[type="text"], .bc-top-footer #newsletter_block_left .news_content .block_content .form-group .button, .newsletter-popup .block_content input[type="submit"], #new_comment_form #new_comment_form_footer #submitNewMessage, #layer_cart .layer_cart_cart .button-container .continue, #full-slider-wrapper .ls-slide .ls-l.medium_text, .product #more_info_block #product_comments_block_tab #new_comment_tab_btn, #authentication button#SubmitCreate {
+	background: #1B1360;
+}
+
+.bc-top-home .bc-banner-tophome .banner-tophome-content--wrapper ul li .bc-services {
+	background-color: #1B1360;
+}
+
+.bc-top-home .bc-banner-tophome .banner-tophome-content--wrapper ul li:nth-child(2n) .bc-services {
+	background-color: #1B1360;
+}
+
+
+.bc-top-home .new-arrival .owl-controls .owl-prev, .bc-top-home .new-arrival .owl-controls .owl-next {
+	border: #1B1360;
+	color: #1B1360;
+}
+
+.bc-top-home .new-arrival .owl-controls .owl-prev:hover, .bc-top-home .new-arrival .owl-controls .owl-next:hover {
+	background: #1B1360;
+}
+
+.bc-filterproduct .type-tab .nav-tabs li:hover a, .bc-filterproduct .type-tab .nav-tabs li.active a {
+	color: #1B1360;
+}
+
+.product-name:hover {
+	color: #1B1360 !important;
+}
+
+.price.product-price, .old-price.product-price {
+	color: #1B1360;
+}
+
+.button.ajax_add_to_cart_button {
+	background: #1B1360;
+	color: #ffffff;
+}
+
+.fncBtn:hover, .addToWishlist:hover, .add_to_compare:hover, .quick-view span:hover, .button.ajax_add_to_cart_button:hover, .bc-bottom-home .bc-productwithcategory .tab-content .item .product-container .left-block .button-container .lnk_view span:hover, .columns-container ul.product_list.list > li .product-container .ajax_add_to_cart_button:hover, .product .pb-center-column .box-info-product .functional-buttons #wishlist_button_nopop:hover, .product .pb-center-column .box-info-product .functional-buttons .add_to_compare:hover {
+	background: #1B1360;
+	border-color: #1B1360;
+}
+
+.slideNav:hover, .owl-controls .owl-nav .owl-prev:hover, .owl-controls .owl-nav .owl-next:hover, #layer_cart .crossseling #blockcart_list .bx-prev:hover, #layer_cart .crossseling #blockcart_list .bx-next:hover, .product .pb-left-column #views_block #view_scroll_left:hover, .product .pb-left-column #views_block #view_scroll_right:hover {
+	color: #1B1360;
+}
+
+.menu-sticky.bc-stickymenu-fixed {
+	background: #1B1360;
+}
+
+.bc-filterproduct .type-tab .nav-tabs li a {
+	color: #FFF;
+}
+
+.bc-bottom-home .bc-filterproduct .product-container .left-block .button-container .button.lnk_view {
+	color: #1B1360;
+	border: 1px solid #1B1360;
+}
+
+.bc-filterproduct .owl-controls .owl-dots .owl-dot.active span {
+	background: #1B1360;
+	border: 1px solid #1B1360;
+}
+
+.bc-filterproduct .owl-controls .owl-dots .owl-dot span {
+	border: 1px solid #1B1360;
+}
+
+#scroll-to-top:hover {
+	background: #1B1360;
+	color: #fff;
+}
+
+.fancybox-close:hover, #layer_cart .cross:hover {
+	background: url("../images/close.png") no-repeat center #1B1360;
+}
+
+/**********************************************************************
+                	END GENERAL
+**********************************************************************/
+
+/**********************************************************************
+              	HEADER
+**********************************************************************/
+
+header#header .banner {
+	background: #1B1360;
+}
+
+#header > .mega-menu {
+	background: #1B1360;
+}
+
+.bc-menu-container.megamenu_top {
+	background: #1B1360;
+}
+
+header .nav .header_links #header_links li a:hover {
+	background: none;
+	color: #1B1360;
+	text-decoration: none;
+}
+
+header .nav #languages-block-top .current:hover::after, header .nav #languages-block-top .current:hover span, header .nav #languages-block-top .current:hover strong, header .nav #languages-block-top .current.active::after, header .nav #languages-block-top .current.active span, header .nav #languages-block-top .current.active strong, header .nav #currencies-block-top .current:hover::after, header .nav #currencies-block-top .current:hover span, header .nav #currencies-block-top .current:hover strong, header .nav #currencies-block-top .current.active::after, header .nav #currencies-block-top .current.active span, header .nav #currencies-block-top .current.active strong, header .nav .header_links .current:hover::after, header .nav .header_links .current:hover span, header .nav .header_links .current:hover strong, header .nav .header_links .current.active::after, header .nav .header_links .current.active span, header .nav .header_links .current.active strong {
+	color: #1B1360;
+}
+
+/*************************************************
+              	BLOCKSEARCH
+*************************************************/
+
+
+header .header-middle #search_block_top {
+	padding-top: 0;
+	position: relative;
+	z-index: 100;
+}
+
+header .header-middle #search_block_top .button-search {
+	background: #1B1360;
+	border: #1B1360;
+}
+
+/*************************************************
+              END BLOCKSEARCH
+*************************************************/
+
+/*************************************************
+              	CART BLOCK
+*************************************************/
+
+header .shopping_cart > a:first-child .ajax_cart_quantity {
+	background: #1B1360;
+}
+
+header#header .cart_block .price {
+	color: #1B1360;
+}
+
+header#header .cart_block .cart_block_list .remove_link .ajax_cart_block_remove_link:hover {
+	color: #1B1360;
+}
+
+/*************************************************
+                END CART BLOCK
+*************************************************/
+
+/*************************************************
+              		MEGAMENU
+*************************************************/
+
+.bc-menu-container.menu_vertical .menu-content > li:hover > a, .bc-menu-container.menu_vertical .menu-content > li:hover > .icon-drop-mobile {
+	color: #1B1360;
+}
+
+.bc-menu-container.menu_vertical .menu-content > li:hover > a::after, .bc-menu-container.menu_vertical .menu-content > li:hover > .icon-drop-mobile::after {
+	color: #1B1360;
+}
+
+.bc-menu-container .column-item a:hover {
+	color: #1B1360;
+}
+
+.bc-menu-container .menu-content > li:hover {
+	background: #fff;
+}
+
+.bc-menu-container .menu-content > li:hover > a {
+	color: #1B1360;
+}
+
+#layer_cart .layer_cart_product .title {
+	color: #1B1360;
+}
+
+#layer_cart .layer_cart_product .layer_cart_product_info #layer_cart_product_price {
+	color: #1B1360;
+}
+
+#layer_cart .layer_cart_cart .layer_cart_row > span.ajax_block_cart_total {
+	color: #1B1360;
+}
+
+/*************************************************
+                END MEGAMENU
+*************************************************/
+
+/**********************************************************************
+                		END HEADER
+***********************************************************************/
+
+/***********************************************************************
+                FOOTER
+***********************************************************************/
+
+.footer-container #footer ul li a:hover {
+	color: #1B1360;
+}
+
+.footer-container #footer .bc-bestsellerproduct .bc-filter-product .product-container .content_price .product-price {
+	color: #1B1360;
+}
+
+.footer-container #footer .bc-bestsellerproduct .bc-filter-product .product-container .left-block .product_img_link::before {
+	background: #1B1360;
+}
+
+/*************************************************
+                		BLOCK SOCIAL
+*************************************************/
+.footer-container #footer #social_block ul li a:hover {
+	color: #ffffff;
+	background: #1B1360;
+	border-color: #1B1360;
+}
+/*************************************************
+                END BLOCK SOCIAL
+*************************************************/
+
+/*********************************************************************
+                		END FOOTER
+*********************************************************************/
+
+
+/*******************************************************************
+                LEFT COLUMN
+********************************************************************/
+
+.block .title_block a:hover, .block h4 a:hover {
+	color: #FFF;
+}
+
+#left_column #categories_block_left li span.grower:hover + a {
+	background: none;
+	color: #1B1360;
+}
+
+#left_column #categories_block_left li span.grower.OPEN + a {
+	color: #1B1360;
+}
+
+#left_column #categories_block_left li span.grower:hover::before {
+	content: "\f138";
+	color: #1B1360;
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+/*************************************************
+                BLOCK CATEGORY
+*************************************************/
+
+#left_column #categories_block_left li a:hover, #left_column #categories_block_left li a.selected {
+	background: none;
+	color: #1B1360;
+}
+
+#left_column #categories_block_left li span.grower:hover + a {
+	background: none;
+	color: #1B1360;
+}
+
+#left_column #categories_block_left li span.grower.OPEN + a {
+	color: #1B1360;
+}
+
+#left_column #categories_block_left li span.grower:hover::before {
+	content: "\f138";
+	color: #1B1360;
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+/*************************************************
+                END BLOCK CATEGORY
+*************************************************/
+
+/*************************************************
+                BLOCK BEST SELLER
+*************************************************/
+
+.block .list-block li a:hover {
+	color: #1B1360;
+}
+
+.block .list-block li a:hover::before {
+	color: #1B1360;
+}
+
+.block .list-block li a:hover::before {
+	color: #1B1360;
+}
+
+/*************************************************
+                END BLOCK BEST SELLER
+*************************************************/
+
+/******************************************************************
+                		END LEFT COLUMN
+******************************************************************/
+
+
+/*************************************************
+                ONEPAGECHECKOUT
+*************************************************/
+
+form.std h3, #new_account_form.std h3, #order-opc h2, #carriers_section h3, #payments_section h3, #order-detail-content h3 {
+	margin: 0 0px 15px;
+	text-transform: uppercase;
+	color: #fff;
+	border-bottom: 2px solid #1B1360;
+	font-size: 14px;
+	background: #1B1360;
+	padding: 5px 10px;
+	font-weight: bold;
+  line-height: 16px;
+}
+
+#opc_checkout div#opc_new_account {
+	box-sizing: border-box;
+	float: left;
+	padding-right: 0.5%;
+	width: 33.33%;
+	background: none;
+}
+
+#order-opc #center_column #opc_checkout h3 {
+	letter-spacing: 1px;
+}
+
+#opc_checkout #opc_new_account #login_form_content .button {
+	background: none;
+	border: 1px solid #1B1360;
+	color: #1B1360;
+	width: 100%;
+	padding: 1px;
+	margin: -1px;
+	box-sizing: border-box;
+}
+
+#opc_checkout #opc_new_account #login_form_content .button:hover {
+	background: #1B1360;
+	color: white;
+}
+
+div.address-type-header {
+	padding: 3px 5px;
+	font-weight: bold;
+	border-bottom: 3px solid #1B1360;
+}
+
+input.confirm_button, #free_order_confirm {
+	margin: 50px 0 0 auto;
+	width: 100%;
+	background: #1B1360;
+	border: 0;
+	text-shadow: none;
+}
+
+#tfoot_static > tr.cart_final_price td {
+	font-weight: bold;
+	text-transform: uppercase;
+	border-top: 2px solid #1B1360;
+	padding-top: 10px;
+}
+
+#cart_summary .price {
+	color: #1B1360;
+}
+
+#cart_summary #total_price {
+	color: #1B1360;
+}
+
+/*************************************************
+              END ONEPAGECHECKOUT
+*************************************************/
+
+/*************************************************
+              SLIDER BLOCK
+*************************************************/
+
+#layerslider .ls-l.small_text {
+	background: #1B1360;
+}
+
+#layerslider .ls-l.small_text::after {
+	background: #1B1360;
+}
+
+.ls-l.small_text::after {
+	background: #1B1360;
+}
+
+/*************************************************
+                END SLIDER BLOCK
+*************************************************/
+
+/*************************************************
+          BLOCK PRODUCT-WITH-CATEGORY
+*************************************************/
+
+.title-menu-h, .bc-footer-home .bc-lastest-post .title_block, .bc-productwithcategory .title_block h2, .bc-productwithcategory .title_block .h2 {
+	background: #1B1360;
+}
+
+.title-menu-h::after, .bc-footer-home .bc-lastest-post .title_block::after, .bc-productwithcategory .title_block h2::after, .bc-productwithcategory .title_block .h2::after {
+	border-color: transparent transparent transparent #1B1360;
+}
+
+.bc-productwithcategory .type-tab .nav-tabs > li.active a, .bc-productwithcategory .type-tab .nav-tabs > li:hover a {
+	color: #1B1360;
+}
+
+.product .pb-left-column #views_block #thumbs_list li a.shown, .product .pb-left-column #views_block #thumbs_list li a:hover {
+	border-color: #1B1360;
+}
+
+.product .pb-right-column .product-custom-content .feature .icon {
+	background-color: #1B1360;
+}
+
+/*************************************************
+          END BLOCK PRODUCT-WITH-CATEGORY
+*************************************************/
+
+
+/*************************************************
+          		BLOCK COOKIES
+*************************************************/
+
+.btn-style-1, .btn-cart, .bc-productwithcategory.bc-prowithbig .tab-content .bc_big_product .button.ajax_add_to_cart_button, .product .pb-center-column .box-info-product #add_to_cart button, .btn-style-4, #cookie-popup .btn, #authentication #login_form button#SubmitLogin, #address .footer_links .btn, #password .footer_links .button {
+	background: #1B1360;
+}
+
+/*************************************************
+          END BLOCK COOKIES
+*************************************************/
+
+/********************************************************************
+           			PRODUCT
+*********************************************************************/
+
+.stock-availability, .product .pb-center-column #availability_statut #availability_value, #cart_summary tbody td.cart_avail span {
+	display: block;
+	color: #1B1360;
+	font-weight: bold;
+}
+
+.product #more_info_block #more_info_tabs li a.selected, .product #more_info_block #more_info_tabs li a:hover {
+	border-bottom: 3px solid #1B1360;
+	color: #1B1360;
+}
+
+.product .pb-center-column .socialsharing_product button:hover i {
+	color: #1B1360;
+}
+
+.product .pb-center-column .box-info-product #color_to_pick_list li.selected {
+	border: 2px solid #1B1360;
+}
+
+/********************************************************************
+          		END PRODUCT
+*********************************************************************/
+
+/********************************************************************
+          				PRODUCT LIST
+*********************************************************************/
+
+.content_sortPagiBar .icon-grid-list #grid:hover, .content_sortPagiBar .icon-grid-list #grid.selected, .content_sortPagiBar .icon-grid-list #list:hover, .content_sortPagiBar .icon-grid-list #list.selected {
+	border-color: #1B1360;
+	background: #1B1360;
+}
+
+.columns-container ul.product_list .availability span {
+	background-color: transparent;
+	border: none;
+	color: #1B1360;
+}
+
+.button.ajax_add_to_cart_button::before {
+	font-family: "FontAweSome";
+	font-size: 1rem;
+	content: "\f07a";
+}
+
+.columns-container ul.product_list.list > li .product-container .right-block .button-container .ajax_add_to_cart_button {
+	background: #1B1360;
+	color: #ffffff;
+}
+
+.columns-container ul.product_list.list > li .product-container .right-block .button-container .ajax_add_to_cart_button:hover {
+	background: #fff;
+	color: #1B1360;
+}
+
+/********************************************************************
+          				END PRODUCT LIST
+*********************************************************************/
+
+/*************************************************
+          		MY ACCOUNT
+*************************************************/
+
+#my-account ul.myaccount-link-list li a:hover {
+	background: #1B1360;
+	color: #fff;
+	border-color: #1B1360;
+}
+
+/*************************************************
+           			END MY ACCOUNT
+*************************************************/
