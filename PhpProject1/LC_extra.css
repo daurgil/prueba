@@ -1,4 +1,103 @@
 
+/**********************************************************************
+                		GENERAL
+**********************************************************************/
+
+.columns-container {
+	background: url(../img/fondo_fibra_carbono.jpg);
+}
+
+
+/**/
+.bc-productwithcategory {
+	margin: 50px 0 0;
+	padding: 0;
+	background: white;
+}
+/**/
+
+.btn-style-2, .btn-style-3, .button, button, button:focus, button:active, button:visited, header#header .cart_block .cart-buttons #button_order_cart, #layer_cart .layer_cart_cart .button-container a.btn, .bc-banner-top .banner-shopnow--btn, .bc-filterproduct .type-tab .nav-tabs li a, .product .pb-center-column #product_comments_block_extra .comments_advices .reviews, .product .pb-center-column #product_comments_block_extra .comments_advices .open-comment-form, .cart_navigation .standard-checkout, .cart_navigation [type="submit"], .cart_navigation .button-exclusive, #products-comparison #product_comparison .button-container a.lnk_view, #contact .contact-form-box div.uploader span.action, .module-bcblog-post .pl_comment_form .submit a, .bc-top-footer #newsletter_block_left .news_content .block_content .form-group input[type="text"], .bc-top-footer #newsletter_block_left .news_content .block_content .form-group .button, .newsletter-popup .block_content input[type="submit"], #new_comment_form #new_comment_form_footer #submitNewMessage, #layer_cart .layer_cart_cart .button-container .continue, #full-slider-wrapper .ls-slide .ls-l.medium_text, .product #more_info_block #product_comments_block_tab #new_comment_tab_btn, #authentication button#SubmitCreate {
+	background: #1B1360;
+}
+
+.bc-top-home .bc-banner-tophome .banner-tophome-content--wrapper ul li .bc-services {
+	background-color: #1B1360;
+}
+
+.bc-top-home .bc-banner-tophome .banner-tophome-content--wrapper ul li:nth-child(2n) .bc-services {
+	background-color: #1B1360;
+}
+
+
+.bc-top-home .new-arrival .owl-controls .owl-prev, .bc-top-home .new-arrival .owl-controls .owl-next {
+	border: #1B1360;
+	color: #1B1360;
+}
+
+.bc-top-home .new-arrival .owl-controls .owl-prev:hover, .bc-top-home .new-arrival .owl-controls .owl-next:hover {
+	background: #1B1360;
+}
+
+.bc-filterproduct .type-tab .nav-tabs li:hover a, .bc-filterproduct .type-tab .nav-tabs li.active a {
+	color: #1B1360;
+}
+
+.product-name:hover {
+	color: #1B1360 !important;
+}
+
+.price.product-price, .old-price.product-price {
+	color: #1B1360;
+}
+
+.button.ajax_add_to_cart_button {
+	background: #1B1360;
+	color: #ffffff;
+}
+
+.fncBtn:hover, .addToWishlist:hover, .add_to_compare:hover, .quick-view span:hover, .button.ajax_add_to_cart_button:hover, .bc-bottom-home .bc-productwithcategory .tab-content .item .product-container .left-block .button-container .lnk_view span:hover, .columns-container ul.product_list.list > li .product-container .ajax_add_to_cart_button:hover, .product .pb-center-column .box-info-product .functional-buttons #wishlist_button_nopop:hover, .product .pb-center-column .box-info-product .functional-buttons .add_to_compare:hover {
+	background: #1B1360;
+	border-color: #1B1360;
+}
+
+.slideNav:hover, .owl-controls .owl-nav .owl-prev:hover, .owl-controls .owl-nav .owl-next:hover, #layer_cart .crossseling #blockcart_list .bx-prev:hover, #layer_cart .crossseling #blockcart_list .bx-next:hover, .product .pb-left-column #views_block #view_scroll_left:hover, .product .pb-left-column #views_block #view_scroll_right:hover {
+	color: #1B1360;
+}
+
+.menu-sticky.bc-stickymenu-fixed {
+	background: #1B1360;
+}
+
+.bc-filterproduct .type-tab .nav-tabs li a {
+	color: #FFF;
+}
+
+.bc-bottom-home .bc-filterproduct .product-container .left-block .button-container .button.lnk_view {
+	color: #1B1360;
+	border: 1px solid #1B1360;
+}
+
+.bc-filterproduct .owl-controls .owl-dots .owl-dot.active span {
+	background: #1B1360;
+	border: 1px solid #1B1360;
+}
+
+.bc-filterproduct .owl-controls .owl-dots .owl-dot span {
+	border: 1px solid #1B1360;
+}
+
+#scroll-to-top:hover {
+	background: #1B1360;
+	color: #fff;
+}
+
+.fancybox-close:hover, #layer_cart .cross:hover {
+	background: url("../images/close.png") no-repeat center #1B1360;
+}
+
+/**********************************************************************
+                	END GENERAL
+**********************************************************************/
 
 /**********************************************************************
               	HEADER
