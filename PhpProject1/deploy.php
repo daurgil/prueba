@@ -53,7 +53,7 @@ function sendEmail($success, $message)
     return true;
 }
 try {
-    $signature = $_SERVER['HTTP_X_GITHUB_EVENT'];
+    $signature = $_SERVER['HTTPS_X_GITHUB_EVENT'];
     if (is_null($signature) || $signature != 'push') {
         header('HTTP/1.0 400 Bad Request');
         die('go away');
