@@ -8,7 +8,7 @@
  */
  
 // random string of characters; must match the "Secret" defined in your GitHub webhook
-define('GITHUB_SECRET', 'LC_deploy');
+define('GITHUB_SECRET', 'LCdeploy');
 // name of the git branch that you're deploying
 define('GITHUB_BRANCH', 'master');
 // your email address, where you'll receive notices of deploy successes/failures
