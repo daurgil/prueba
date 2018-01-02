@@ -136,5 +136,5 @@ if(!$mailSuccess) {
     header('HTTP/1.0 500 Internal Server Error');
     die('Failed to send email to admin!');
 }
-die("All good here!");
+die("All good!");
 ?>
