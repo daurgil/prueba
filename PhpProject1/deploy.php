@@ -32,7 +32,7 @@ define('KEYPAIR_PASSPHRASE', 'luiscambra');
  */
 function sendEmail($success, $message)
 {
-    $headers = 'Content-type: text/plain' . "\r\n" .
+    /*$headers = 'Content-type: text/plain' . "\r\n" .
         'From: david@'.SITE_DOMAIN;
     $subject = '['.SITE_DOMAIN.'] ';
     if ($success) {
@@ -49,7 +49,8 @@ function sendEmail($success, $message)
         $subject,
         $message,
         $headers
-    );
+    );*/
+    return true;
 }
 try {
     $signature = $_SERVER['HTTP_X_GITHUB_EVENT'];
@@ -85,7 +86,7 @@ try {
         die("Ignoring push to '$branchRef'");
     }
     // ssh into the local server
-    $sshSession = ssh2_connect('localhost', SSH_PORT);
+    $sshSession = ssh2_connect('185.45.73.200', SSH_PORT);
     $authSuccess = ssh2_auth_pubkey_file(
         $sshSession,
         SSH_USERNAME,
@@ -136,5 +137,5 @@ if(!$mailSuccess) {
     header('HTTP/1.0 500 Internal Server Error');
     die('Failed to send email to admin!');
 }
-die("All good!");
+die("All good here!");
 ?>
