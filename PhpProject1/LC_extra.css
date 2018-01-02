@@ -1,30 +1,6 @@
 
 
-/**********************************************************************
-              	HEADER
-**********************************************************************/
 
-header#header .banner {
-	/*background: #1B1360;*/
-}
-
-#header > .mega-menu {
-	background: #1B1360;
-}
-
-.bc-menu-container.megamenu_top {
-	background: #1B1360;
-}
-
-header .nav .header_links #header_links li a:hover {
-	background: none;
-	color: #1B1360;
-	text-decoration: none;
-}
-
-header .nav #languages-block-top .current:hover::after, header .nav #languages-block-top .current:hover span, header .nav #languages-block-top .current:hover strong, header .nav #languages-block-top .current.active::after, header .nav #languages-block-top .current.active span, header .nav #languages-block-top .current.active strong, header .nav #currencies-block-top .current:hover::after, header .nav #currencies-block-top .current:hover span, header .nav #currencies-block-top .current:hover strong, header .nav #currencies-block-top .current.active::after, header .nav #currencies-block-top .current.active span, header .nav #currencies-block-top .current.active strong, header .nav .header_links .current:hover::after, header .nav .header_links .current:hover span, header .nav .header_links .current:hover strong, header .nav .header_links .current.active::after, header .nav .header_links .current.active span, header .nav .header_links .current.active strong {
-	color: #1B1360;
-}
 
 /*************************************************
               	BLOCKSEARCH
