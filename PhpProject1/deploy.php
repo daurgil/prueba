@@ -1,50 +1,140 @@
 <?php
-	/**
-	 * GIT DEPLOYMENT SCRIPT
-	 *
-	 * Used for automatically deploying websites via github or bitbucket, more deets here:
-	 *
-	 *		https://gist.github.com/1809044
-	 */
-
-	// The commands
-	$commands = array(
-		'echo $PWD',
-		'whoami',
-		'git pull',
-		'git status',
-		'git submodule sync',
-		'git submodule update',
-		'git submodule status',
-	);
-
-	// Run the commands for output
-	$output = '';
-	foreach($commands AS $command){
-		// Run it
-		$tmp = shell_exec($command);
-		// Output
-		$output .= "<span style=\"color: #6BE234;\">\$</span> <span style=\"color: #729FCF;\">{$command}\n</span>";
-		$output .= htmlentities(trim($tmp)) . "\n";
-	}
-
-	// Make it pretty for manual user access (and why not?)
+/**
+ * deploy.php by Hayden Schiff (oxguy3)
+ * Available at https://gist.github.com/oxguy3/70ea582d951d4b0f78edec282a2bebf9
+ * 
+ * No rights reserved. Dedicated to public domain via CC0 1.0 Universal.
+ * See https://creativecommons.org/publicdomain/zero/1.0/ for terms.
+ */
+ 
+// random string of characters; must match the "Secret" defined in your GitHub webhook
+define('GITHUB_SECRET', 'LC_deploy');
+// name of the git branch that you're deploying
+define('GITHUB_BRANCH', 'master');
+// your email address, where you'll receive notices of deploy successes/failures
+define('EMAIL_RECIPIENT', 'david@luiscambra.com');
+// domain of your website
+define('SITE_DOMAIN', 'luiscambra.com');
+// port number of SSH for your server (may vary by hosting provider -- for me, it was 21098)
+define('SSH_PORT', 50050);
+// username for SSH (should be the same as your cPanel login username)
+define('SSH_USERNAME', 'root');
+// filename for the keypair to use -- no need to change this if you follow the readme instructions
+define('KEYPAIR_NAME', 'deploy');
+// the passphrase for your keypair
+define('KEYPAIR_PASSPHRASE', 'luiscambra');
+// END OF CONFIGURATION OPTIONS
+/**
+ * Convenience function for sending emails
+ *
+ * If you want to disable email sending, just replace the content of this
+ * function with "return true;".
+ */
+function sendEmail($success, $message)
+{
+    $headers = 'Content-type: text/plain' . "\r\n" .
+        'From: david@'.SITE_DOMAIN;
+    $subject = '['.SITE_DOMAIN.'] ';
+    if ($success) {
+        $subject .= 'Deploy success';
+    } else {
+        $subject .= 'Deploy failure';
+        $headers .= "\r\n" .
+            'X-Priority: 1 (Highest)' . "\r\n" .
+            'X-MSMail-Priority: High' . "\r\n" .
+            'Importance: High';
+    }
+    return mail(
+        EMAIL_RECIPIENT,
+        $subject,
+        $message,
+        $headers
+    );
+}
+try {
+    $signature = $_SERVER['HTTP_X_GITHUB_EVENT'];
+    if (is_null($signature) || $signature != 'push') {
+        header('HTTP/1.0 400 Bad Request');
+        die('go away');
+    }
+    $payload = file_get_contents('php://input');
+    // get the signature out of the headers and split it into parts
+    $signature = $_SERVER['HTTP_X_HUB_SIGNATURE'];
+    $sigParts  = explode('=', $signature);
+    if (sizeof($sigParts) != 2) {
+        throw new Exception('Bad signature: wrong number of \'=\' chars');
+    }
+    $sigAlgo = $sigParts[0];
+    $sigHash = $sigParts[1];
+    // verify that the signature is correct
+    $hash = hash_hmac($sigAlgo, $payload, GITHUB_SECRET);
+    if ($hash === false) {
+        throw new Exception("Unknown signature algo: $sigAlgo");
+    }
+    if ($hash != $sigHash) {
+        throw new Exception("Signatures didn't match. Ours: '$hash', theirs: '$sigHash'.");
+    }
+    // read the payload
+    $data = json_decode($payload);
+    if (is_null($data)) {
+        throw new Exception('Failed to decode JSON payload');
+    }
+    // make sure it's the right branch
+    $branchRef = $data->ref;
+    if ($branchRef != 'refs/heads/'.GITHUB_BRANCH) {
+        die("Ignoring push to '$branchRef'");
+    }
+    // ssh into the local server
+    $sshSession = ssh2_connect('localhost', SSH_PORT);
+    $authSuccess = ssh2_auth_pubkey_file(
+        $sshSession,
+        SSH_USERNAME,
+        '/'.SSH_USERNAME.'/.ssh/'.KEYPAIR_NAME.'.pub',
+        '/'.SSH_USERNAME.'/.ssh/'.KEYPAIR_NAME,
+        KEYPAIR_PASSPHRASE
+    );
+    if (!$authSuccess) {
+        throw new Exception('SSH authentication failure');
+    }
+    // start a shell session
+    $shell = ssh2_shell($sshSession, 'xterm');
+    if ($shell === false) {
+        throw new Exception('Failed to open shell');
+    }
+    stream_set_blocking($shell, true);
+    stream_set_timeout($shell, 15);
+    // run the commands
+    $output = '';
+    $endSentinel = "!~@#_DONE_#@~!";
+    fwrite($shell, 'cd /var/www/vhosts/dns73200.phdns12.es/httpdocs/pruebagit' . "\n");
+    fwrite($shell, 'git pull' . "\n");
+    fwrite($shell, 'echo ' . escapeshellarg($endSentinel) . "\n");
+    while (true) {
+        $o = stream_get_contents($shell);
+        if ($o === false) {
+            throw new Exception('Failed while reading output from shell');
+        }
+        $output .= $o;
+        if (strpos($output, $endSentinel) !== false) {
+            break;
+        }
+    }
+    fclose($shell);
+    fclose($sshSession);
+    $mailBody = "GitHub payload:\r\n"
+        . print_r($data, true)
+        . "\r\n\r\n"
+        . "Output of `git pull`:\r\n"
+        . $output
+        . "\r\n"
+        . 'That\'s all, toodles!';
+    $mailSuccess = sendEmail(true, $mailBody);
+} catch (Exception $e) {
+    $mailSuccess = sendEmail(false, strval($e));
+}
+if(!$mailSuccess) {
+    header('HTTP/1.0 500 Internal Server Error');
+    die('Failed to send email to admin!');
+}
+die("All good here!");
 ?>
-<!DOCTYPE HTML>
-<html lang="en-US">
-<head>
-	<meta charset="UTF-8">
-	<title>GIT DEPLOYMENT SCRIPT</title>
-</head>
-<body style="background-color: #000000; color: #FFFFFF; font-weight: bold; padding: 0 10px;">
-<pre>
- .  ____  .    ____________________________
- |/      \|   |                            |
-[| <span style="color: #FF0000;">&hearts;    &hearts;</span> |]  | Git Deployment Script v0.1 |
- |___==___|  /              &copy; oodavid 2012 |
-              |____________________________|
-
-<?php echo $output; ?>
-</pre>
-</body>
-</html>
