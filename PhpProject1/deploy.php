@@ -18,7 +18,7 @@ define('SITE_DOMAIN', 'luiscambra.com');
 // port number of SSH for your server (may vary by hosting provider -- for me, it was 21098)
 define('SSH_PORT', 50050);
 // username for SSH (should be the same as your cPanel login username)
-define('SSH_USERNAME', 'root');
+define('SSH_USERNAME', 'admin');
 // filename for the keypair to use -- no need to change this if you follow the readme instructions
 define('KEYPAIR_NAME', 'deploy');
 // the passphrase for your keypair
@@ -107,7 +107,7 @@ try {
     // run the commands
     $output = '';
     $endSentinel = "!~@#_DONE_#@~!";
-    fwrite($shell, 'cd /var/www/vhosts/dns73200.phdns12.es/httpdocs/pruebagit' . "\n");
+    fwrite($shell, 'cd /var/www/vhosts/dns73200.phdns12.es/httpdocs/pruebagit/prueba' . "\n");
     fwrite($shell, 'git pull' . "\n");
     fwrite($shell, 'echo ' . escapeshellarg($endSentinel) . "\n");
     while (true) {
